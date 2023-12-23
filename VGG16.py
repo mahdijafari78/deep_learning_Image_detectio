@@ -5,10 +5,11 @@ from keras.applications.vgg16 import VGG16, preprocess_input, decode_predictions
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+
 image_folder_path = "image"
 
 image_names = os.listdir(image_folder_path)
-model = VGG16(weights='imagenet')
+model = VGG16(weights='imagenet', input_shape=(224, 224, 3))
 
 for image_name in image_names:
     img = image.load_img(f'{image_folder_path}/{image_name}', target_size=(224, 224))
