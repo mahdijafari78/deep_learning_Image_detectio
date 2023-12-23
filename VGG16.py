@@ -20,5 +20,4 @@ for image_name in image_names:
     # print(f"name_image: {image_name}")
     plt.imshow(img)
     plt.title(f"name_image: {image_name} || predictions:{decoded_predictions[0][1]} ")
-    plt.show()
-    time.sleep(5)
+    plt.savefig(f'out_put_img/{image_name}')
